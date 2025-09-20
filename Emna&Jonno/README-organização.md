@@ -12,12 +12,12 @@
 
 ### 3️⃣ Estilo inicial (CSS)
 - [x] Definir variáveis de cores, fontes e espaçamentos (se for usar).
-- [ ] Estilizar layout geral (grid/flex para as boxes).
-- [ ] Testar visual no desktop para garantir funcionamento.
+- [x] Estilizar layout geral (grid/flex para as boxes).
+- [x] Testar visual no desktop para garantir funcionamento.
 
 ### 4️⃣ Responsividade
-- [ ] Adicionar media queries para tablets e celulares.
-- [ ] Testar em diferentes tamanhos de tela (vertical e horizontal).
+- [x] Adicionar media queries para tablets e celulares.
+- [x] Testar em diferentes tamanhos de tela (vertical e horizontal).
 
 ### 5️⃣ Funcionalidades em JavaScript
 - [ ] Implementar lógica/interações necessárias (filtros, animações, etc.).
