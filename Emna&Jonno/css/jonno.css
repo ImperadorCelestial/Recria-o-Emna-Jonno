@@ -135,6 +135,10 @@ li.dropdown
     
 }
 
+#main-menu
+{
+  display: none;
+}
 
 /*--- main ---*/
 
@@ -312,3 +316,23 @@ footer
 
 /*--- Responsividade ---*/
 
+@media (max-width: 780px)
+{
+  .menu
+  {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 680)
+{
+  .ul
+  {
+    display: none;
+  }
+
+  #main-menu
+  {
+    display: block;
+  }
+}

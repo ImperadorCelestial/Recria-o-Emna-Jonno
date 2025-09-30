@@ -1,3 +1,17 @@
+/*--- fonts ---*/
+
+@font-face {
+    font-family: Playfair-Regular;
+    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: Playfair-SemiBold;
+    src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
+}
+
+
+
 /* Organização do site */
 
 body
@@ -6,8 +20,8 @@ body
     flex-direction: column;
     justify-content: center;
     background-color: lightgray;
-    background-image: url(../img/Emna&Jonno\ -\ background\ img.webp);
-    background-size: cover;
+    background-image: url(../img/fundo-branco-com-formas-de-linhas-luxuosas-douradas_1017-27144.png);
+    background-repeat: repeat;
     background-position: center;
 }
 
@@ -21,20 +35,20 @@ main
 .header
 {
     width: 100%;
-    height: 70px;
-    background-color: rgba(240, 248, 255, 0.6);
+    height: 63px;
+    background-color: rgba(240, 248, 255, 0.10);
     backdrop-filter: blur(3px);
     position: absolute;
     left: 0px;
     top: 0px;
     border-bottom: 1px solid darkgray;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .h2-header
 {
-    margin-left: 30px;
-    font-family: 'PlayfairDisplay-SemiBold.ttf';
+    font-family: 'Playfair-SemiBold';
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Conteúdo */
@@ -66,7 +80,7 @@ main
 .h2
 {
     margin: auto;
-    font-family: 'PlayfairDisplay-SemiBold.ttf';
+    font-family: 'Playfair-SemiBold';
 }
 
 .cad-btn
@@ -77,7 +91,7 @@ main
     border-radius: 6px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
     margin: auto;
-    font-family: 'PlayfairDisplay-SemiBold.ttf';
+    font-family: 'Playfair-SemiBold';
 }
 
 .container-direita
@@ -104,7 +118,7 @@ main
     border-radius: 6px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
-    font-family: 'PlayfairDisplay-SemiBold.ttf';
+    font-family: 'Playfair-SemiBold';
 }
 
 .checkbox-container {
@@ -114,7 +128,7 @@ main
     font-size: 16px;
     cursor: pointer;
     user-select: none;
-    font-family: 'PlayfairDisplay-SemiBold.ttf';
+    font-family: 'Playfair-SemiBold';
   }
 
   input[type="checkbox"] {
@@ -122,3 +136,29 @@ main
     height: 12px;
     cursor: pointer;
   }
+
+  /*--- Responsividade ---*/
+
+@media (max-width: 920px) 
+{
+    
+    .container-pai
+    {
+        flex-direction: column;
+    }
+
+    .container-esquerda
+    {
+        width: 300px;
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .container-direita
+    {
+        width: 300px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 7px;
+    }
+
+}

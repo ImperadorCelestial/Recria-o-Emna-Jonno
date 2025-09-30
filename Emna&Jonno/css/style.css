@@ -1,3 +1,17 @@
+/*--- fonts ---*/
+
+@font-face {
+    font-family: Playfair-Regular;
+    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: Playfair-SemiBold;
+    src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
+}
+
+
+
 body
 {
     background-image: url(../img/Emna&Jonno\ -\ background\ img.webp);
@@ -21,7 +35,7 @@ body
   
 .screen h1 
 {
-    font-family: 'PlayfairDisplay-SemiBold.ttf';
+    font-family: 'Playfair-SemiBold';
     font-size: 40px;
     margin-bottom: 40px;
     font-weight: 600;
@@ -30,7 +44,7 @@ body
 
 .button
 {
-    font-family: 'PlayfairDisplay-Regular.ttf';
+    font-family: 'Playfair-Regular';
 }
   
 .grid
