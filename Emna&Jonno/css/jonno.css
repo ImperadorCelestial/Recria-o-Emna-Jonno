@@ -137,9 +137,38 @@ li.dropdown
 
 #main-menu
 {
+  /* Eliminar o css global herdado do fa fa icons */
+  all: unset;
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; /* solid */
+  font-style: normal;
+
+
   display: none;
+  margin-left: 25px;
+  color: black;
+  font-size: 30px;
+  
+  width: auto; 
+  height: auto;
+  border: 3px solid black;
+  border-radius: 5px;
 }
 
+#main-user
+{
+
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+  margin-left: 80px; 
+
+}
+.icon i{
+  margin: 10px;
+}
 /*--- main ---*/
 
 body
@@ -316,23 +345,28 @@ footer
 
 /*--- Responsividade ---*/
 
-@media (max-width: 780px)
+@media (max-width:780px)
 {
   .menu
-  {
-    gap: 20px;
-  }
+    {
+      gap: 20px;
+    }
 }
 
-@media (max-width: 680)
+@media (max-width:679px)
 {
-  .ul
-  {
-    display: none;
-  }
+  .menu
+    {
+      display: none;
+    }
 
   #main-menu
-  {
-    display: block;
-  }
+    {
+      display: inline-block; 
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 6px;
+      padding-right: 6px;
+      cursor: pointer;
+    }
 }

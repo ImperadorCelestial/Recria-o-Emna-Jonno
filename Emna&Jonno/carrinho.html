@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jonno Ray – Carrinho Avançado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/carrinho.css" />
+</head>
+<body>
+
+  
+  <main>
+  
+      <h2>Carrinho</h2>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-total" id="cart-total">Total: R$ 0,00</div>
+
+      <button type="submit">Pagar Agora</button>
+    </aside>
+    <div>
+
+  </main>
+
+
+  
+  
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #1f2937;
+      color: white;
+    }
+    nav {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    button.menu {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+    nav.show {
+      display: flex;
+    }
+    @media(min-width: 768px) {
+      button.menu { display: none; }
+      nav {
+        display: flex !important;
+        flex-direction: row;
+      }
+    }
+    a:focus, button:focus {
+      outline: 2px solid rgb(56, 56, 52);
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+
+
+  <section style="max-width: 400px; margin: 2rem auto; padding: 1rem; border: 4px solid #2c2929; border-radius: 8px;">
+  <h2>Finalizar Pagamento</h2>
+
+  <label for="saved-cards">Selecione um Cartão:</label><br />
+  <select id="saved-cards">
+    <option value="" disabled selected>Escolha um cartão</option>
+    <option value="1">Visa •••• 1234</option>
+    <option value="2">Mastercard •••• 5678</option>
+  </select><br /><br />
+
+  <form id="fake-payment">
+    <label for="card">Número do Cartão:</label><br />
+    <input type="text" id="card" placeholder="0000 0000 0000 0000" required><br /><br />
+
+    <label for="name">Nome no Cartão:</label><br />
+    <input type="text" id="name" placeholder="Seu Nome" required><br /><br />
+
+    <label for="expiry">Validade:</label><br />
+    <input type="text" id="expiry" placeholder="MM/AA" required><br /><br />
+
+    <label for="cvv">CVV:</label><br />
+    <input type="text" id="cvv" placeholder="123" required><br /><br />
+
+    <button type="submit">Finalizar</button>
+  </form>
+
+  <div id="success" style="display: none; color: green; margin-top: 1rem;">
+    ✅ Pagamento simulado com sucesso!
+  </div>
+</section>
+
+<section style="max-width: 400px; margin: 2rem auto; padding: 1rem; border: 4px solid #413c3c; border-radius: 8px;">
+  <h3>Histórico de Compras</h3>
+  <ul id="history" style="list-style: none; padding: 0;"></ul>
+</section>
+
+<script>
+  const form = document.getElementById('fake-payment');
+  const success = document.getElementById('success');
+  const history = document.getElementById('history');
+  const savedCards = document.getElementById('saved-cards');
+
+  const cards = {
+    "1": {
+      number: "4111 1111 1111 1234",
+      name: "João da Silva",
+      expiry: "12/26"
+    },
+    "2": {
+      number: "5555 4444 3333 5678",
+      name: "Maria Souza",
+      expiry: "11/25"
+    }
+  };
+
+  savedCards.addEventListener('change', function () {
+    const selected = cards[this.value];
+    if (selected) {
+      document.getElementById('card').value = selected.number;
+      document.getElementById('name').value = selected.name;
+      document.getElementById('expiry').value = selected.expiry;
+      document.getElementById('cvv').value = ""; // CVV nunca deve ser salvo
+    }
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const amount = (Math.random() * 2000 + 20).toFixed(4); // valor aleatório simulado
+    const time = new Date().toLocaleString('pt-BR');
+
+    // Simula sucesso
+    success.style.display = 'block';
+    form.reset();
+
+    // Adiciona ao histórico
+    const li = document.createElement('li');
+    li.textContent = `${time} - ${name} - R$ ${amount}`;
+    history.prepend(li);
+
+    form.reset();
+    savedCards.selectedIndex = 0;
+  });
+  
+    const menuBtn = document.querySelector('.menu');
+    const nav = document.getElementById('menu');
+    
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
+
+  <script src="js/carrinho.js"></script>
+</body>
+</html>
