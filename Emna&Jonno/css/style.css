@@ -1,11 +1,13 @@
 /*--- fonts ---*/
 
-@font-face {
+@font-face 
+{
     font-family: Playfair-Regular;
     src: url(../fonts/PlayfairDisplay-Regular.ttf);
 }
 
-@font-face {
+@font-face 
+{
     font-family: Playfair-SemiBold;
     src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
 }

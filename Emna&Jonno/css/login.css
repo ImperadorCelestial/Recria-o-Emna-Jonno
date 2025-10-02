@@ -1,11 +1,13 @@
 /*--- fonts ---*/
 
-@font-face {
+@font-face 
+{
     font-family: Playfair-Regular;
     src: url(../fonts/PlayfairDisplay-Regular.ttf);
 }
 
-@font-face {
+@font-face 
+{
     font-family: Playfair-SemiBold;
     src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
 }
@@ -49,6 +51,8 @@ main
 {
     font-family: 'Playfair-SemiBold';
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 12px;
+    margin-left: 25px;
 }
 
 /* Conteúdo */
@@ -121,7 +125,8 @@ main
     font-family: 'Playfair-SemiBold';
 }
 
-.checkbox-container {
+.checkbox-container 
+{
     display: flex;
     align-items: center;
     gap: 8px;
@@ -129,19 +134,27 @@ main
     cursor: pointer;
     user-select: none;
     font-family: 'Playfair-SemiBold';
-  }
+}
 
-  input[type="checkbox"] {
+  input[type="checkbox"] 
+{
     width: 12px;
     height: 12px;
     cursor: pointer;
-  }
+}
 
   /*--- Responsividade ---*/
 
-@media (max-width: 920px) 
+@media (max-width: 920px)
 {
-    
+    .container-direita
+    {
+        width: 300px;
+    }
+}
+
+@media (max-width: 640px) 
+{
     .container-pai
     {
         flex-direction: column;
@@ -160,5 +173,4 @@ main
         border-top-right-radius: 0px;
         border-bottom-left-radius: 7px;
     }
-
 }

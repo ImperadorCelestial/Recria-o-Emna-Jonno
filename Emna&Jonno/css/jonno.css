@@ -1,11 +1,13 @@
 /*--- fonts ---*/
 
-@font-face {
+@font-face 
+{
     font-family: Playfair-Regular;
     src: url(../fonts/PlayfairDisplay-Regular.ttf);
 }
 
-@font-face {
+@font-face 
+{
     font-family: Playfair-SemiBold;
     src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
 }
@@ -91,13 +93,11 @@ li a:hover, .dropdown:hover .dropbtn
 {
     background-color: rgba(0, 0, 0, 0.0);
     border-radius: 5px;
-    
 }
   
 li.dropdown 
 {
     display: inline-block;
-
 }
   
 .dropdown-content 
@@ -132,7 +132,6 @@ li.dropdown
 {
     width: 100px;
     height: 100px;
-    
 }
 
 #main-menu
@@ -155,20 +154,29 @@ li.dropdown
   border-radius: 5px;
 }
 
-#main-user
+.icon
 {
-
-}
-
-.icon{
+  width: 97px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  margin-left: 80px; 
-
+  margin-right: 25px;
 }
-.icon i{
+.icon i
+{
   margin: 10px;
 }
+
+a
+{
+  color: #000;
+}
+
+a:visited
+{
+  color: #000;
+}
+
 /*--- main ---*/
 
 body
@@ -203,7 +211,8 @@ body
     font-family: 'Playfair-Regular';
 }
 
-html {
+html 
+{
   scroll-behavior: smooth; /* faz a animação automática */
 }
 
@@ -345,28 +354,41 @@ footer
 
 /*--- Responsividade ---*/
 
-@media (max-width:780px)
+@media (max-width:920px)
 {
-  .menu
-    {
-      gap: 20px;
-    }
+  .icon
+  {
+    margin-right: 10px;
+  }
 }
 
-@media (max-width:679px)
+@media (max-width:880px)
 {
   .menu
-    {
-      display: none;
-    }
+  {
+    gap: 20px;
+  }
+}
+
+@media (max-width:760px)
+{
+  .menu
+  {
+    display: none;
+  }
 
   #main-menu
+  {
+    display: inline-block; 
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+    cursor: pointer;
+  }
+
+    nav
     {
-      display: inline-block; 
-      padding-top: 0px;
-      padding-bottom: 0px;
-      padding-left: 6px;
-      padding-right: 6px;
-      cursor: pointer;
+      justify-content: space-between;
     }
 }
