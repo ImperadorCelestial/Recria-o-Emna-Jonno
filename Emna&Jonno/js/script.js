@@ -17,6 +17,17 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 
+
+// Hamburgão
+
+// const hamburger = document.getElementById('main-menu');
+//   const navLinks = document.getElementById('menu');
+
+//   hamburger.addEventListener('click', () => {
+//     menu.classList.toggle('active');
+//   });
+
+
 // "Ver mais" - btn
 
 const botao1 = document.getElementById("verMaisBtn1");

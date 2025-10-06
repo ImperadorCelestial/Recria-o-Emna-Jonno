@@ -55,6 +55,18 @@ main
     margin-left: 25px;
 }
 
+a
+{
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited
+{
+  color: #000;
+  text-decoration: none;
+}
+
 /* Conteúdo */
 
 .container-pai

@@ -15,7 +15,7 @@
             <i id="main-menu" class="fa fa-bars" aria-hidden="true"></i>
             
 
-          <ul class="menu">
+          <ul class="menu" id="menu">
 
             <li class="dropdown">
                 <a href="#aneis" class="dropbtn">ANEIS</a>
@@ -785,6 +785,16 @@
             © 2025 Emna & Jonno. Todos os direitos reservados.
         </div>
     </footer>
+
+
+    <script>
+        const hamburger = document.getElementById('main-menu');
+        const navLinks = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 
     <script src="js/script.js"></script>
 </body>
